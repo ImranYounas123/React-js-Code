@@ -26,12 +26,30 @@ return(
       }
     })()}
     <h1>----------------------------------------------------------------------------------------------</h1>
-    <Input />
+   <Stdmarks />
+   <InputBox/>
   </div>
   
 );
 }
-function Input()
+function Stdmarks()
+{
+const [Marks, setUserData] = useState(80) // false for User still not loged 
+  return(
+    <div>
+      <h1>If-Else Using Unary Operator !</h1>
+      {Marks >= 80? 
+      <h1>If Student get {Marks} Marks  Grade will be A+</h1>
+      :Marks < 80? 
+      <h1>{Marks} If Student get {Marks} Marks  Grade will be A</h1>
+      :<h1>{Marks} Student passed in Exam</h1>}
+    </div>
+  )
+}
+
+
+
+function InputBox()
 {
 const [data1, setData] = useState(null);
   const [data2, setDataBtn] = useState(false);
